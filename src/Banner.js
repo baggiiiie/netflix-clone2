@@ -26,13 +26,15 @@ function Banner() {
     fetchData();
   }, []);
 
+  console.log(movie.backdrop_path)
+
   return (
     <header
       className="banner"
       style={{
         backgroundSize: 'cover',
         // eslint-disable-next-line quotes
-        backgroundImage: `url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg")`,
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
         backgroundPosition: 'center center',
       }}
     >
