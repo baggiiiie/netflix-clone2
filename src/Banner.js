@@ -39,10 +39,12 @@ function Banner() {
       }}
     >
       <div className="banner_contents">
-        <h1 className="banner_title">Banner title</h1>
+        <h1 className="banner_title">
+          {movie?.title || movie?.name || movie?.original_name}
+        </h1>
         <div className="banner_buttons">
-          <button className="banner_button">Button 1</button>
-          <button className="banner_button">Button 2</button>
+          <button className="banner_button">Play</button>
+          <button className="banner_button">Add To List</button>
         </div>
         <h1 className="banner_description">
           {truncateDescription('some description')}
