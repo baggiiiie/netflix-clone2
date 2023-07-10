@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from 'react';
 import './Banner.css';
 // import a local axios here, not global
-// import axios from './axios';
+import axios from './axios';
 import requests from './Requests';
 
 function Banner() {
@@ -13,18 +13,20 @@ function Banner() {
     return string.length > n ? `${string.substr(0, n - 1)}...` : string;
   }
 
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const request = await axios.get(requests.fetchNetflixOriginals);
-  //     setMovie(
-  //       request.data.results[
-  //         Math.floor(Math.random() * request.data.results.length - 1)
-  //       ],
-  //     );
-  //     return request;
-  //   }
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    async function fetchData() {
+      const request = await axios.get(requests.fetchNetflixOriginals);
+      setMovie(
+        request.data.results[
+          Math.floor(Math.random() * request.data.results.length - 1)
+        ],
+      );
+      return request;
+    }
+    fetchData();
+  }, []);
+
+  console.log(movie.backdrop_path)
 
   return (
     <header
@@ -32,7 +34,7 @@ function Banner() {
       style={{
         backgroundSize: 'cover',
         // eslint-disable-next-line quotes
-        backgroundImage: `url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg")`,
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
         backgroundPosition: 'center center',
       }}
     >
