@@ -9,7 +9,7 @@ import requests from './Requests';
 
 function Banner() {
   const [movie, setMovie] = useState([]);
-  function truncateDescription(string, n = 10) {
+  function truncateDescription(string, n = 150) {
     return string.length > n ? `${string.substr(0, n - 1)}...` : string;
   }
 
@@ -26,7 +26,7 @@ function Banner() {
     fetchData();
   }, []);
 
-  console.log(movie.backdrop_path)
+  console.log(movie)
 
   return (
     <header
@@ -47,7 +47,7 @@ function Banner() {
           <button className="banner_button">Add To List</button>
         </div>
         <h1 className="banner_description">
-          {truncateDescription('some description')}
+          {truncateDescription(`${movie?.overview}`)}
         </h1>
       </div>
       <div className="banner_fadeBottom" />
