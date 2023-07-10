@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react';
 import './Nav.css';
 
 function Nav() {
-  const [navHide, setNavHide] = useState(false);
+  const [navHide, setNavHide] = useState(true);
   const navTransition = () => {
     if (window.scrollY > 100) {
-      setNavHide(true);
-    } else {
       setNavHide(false);
+    } else {
+      setNavHide(true);
     }
   };
   useEffect(() => {
