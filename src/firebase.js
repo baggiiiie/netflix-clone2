@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 // Import the functions you need from the SDKs you need
-import firebase from 'firebase';
+import "firebase/auth";
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from 'firebase/analytics';
 // TODO: Add SDKs for Firebase products that you want to use
@@ -22,7 +22,7 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 const analytics = getAnalytics(firebaseApp);
-const auth = firebase.auth();
+const auth = auth();
 
 export {auth};
 export default db;
