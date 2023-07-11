@@ -6,19 +6,21 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import LoginScreen from './LoginScreen';
 
 function App() {
+  const user = null;
+
   return (
     <div className="app">
        <Router>
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Routes>
-          <Route path='/' element={<HomeScreen/>} />
-
-          {/* <Route path="/" >
-            <HomeScreen />
-          </Route> */}
+          {/* <Route exact path='/' element={<HomeScreen/>} /> */}
+          <Route path='/' element={
+            !user ? <LoginScreen /> : <HomeScreen />
+          } />
           <Route path="/about">
           </Route>
           <Route path="/users">
