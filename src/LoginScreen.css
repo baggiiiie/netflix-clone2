@@ -21,18 +21,19 @@
     position: fixed;
     left: 0;
     width: 150px;
-    padding: 10px 20px;
+    padding: 20px;
+    object-fit: contain;
 }
 .loginScreen_gradient {
     width: 100%;
     z-index: 1;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.4);
-    background-image: linear-gradienty(
+    background: rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(
         to top,
-        rgba(0, 0, 0, 0.8) 0,
+        rgba(0, 0, 0, 0.7) 0,
         rgba(0, 0, 0, 0) 60%,
-        rgba(0, 0, 0, 0.8) 100%)
+        rgba(0, 0, 0, 0.7) 100%)
 }
 .loginScreen_body {
     position: absolute;
@@ -43,13 +44,39 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    width: 100%;
 }
-.loginScreen_body > h1{
+.loginScreen_body > h1 {
     font-size: 3.125rem;
     margin-bottom: 20px;
 }
-.loginScreen_body > h2{
+.loginScreen_body > h2 {
     font-size: 2rem;
     font-weight: 400;
     margin-bottom: 30px;
+}
+.loginScreen_body > h3 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+.loginScreen_input {
+    margin: 20px;
+}
+.loginScreen_input > form > input {
+    padding: 10px;
+    outline-width: 0;
+    height: 30px;
+    width: 30%;
+    border: none;
+    max-width: 600px;
+}
+.loginScreen_getStarted {
+    padding: 16px 20px;
+    font-size: 1rm;
+    color: #fff;
+    border: none;
+    background-color: #e50914;
+    font-weight: 600;
+    cursor: pointer;
 }
