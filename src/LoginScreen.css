@@ -45,6 +45,8 @@
     margin-right: auto;
     text-align: center;
     width: 100%;
+    left: 0;
+    right: 0;
 }
 .loginScreen_body > h1 {
     font-size: 3.125rem;
