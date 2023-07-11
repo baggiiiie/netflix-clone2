@@ -1,29 +1,58 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './SignUpScreen.css'
-import { auth } from './firebase';
+import {
+    auth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    onAuthStateChanged
+} from './firebase';
 
 function SignUpScreen(props) {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
 
     const register = (e) => {
-        e.preventDefualt();
-        auth
-        .createUserWithEmailAndPassword(
+        e.preventDefault();
+        createUserWithEmailAndPassword(
+            auth,
             emailRef.current.value,
             passwordRef.current.value
         )
-        .then((authUser) => {
-            console.log(authUser);
+        .then((user) => {
+            console.log(user);
         })
         .catch((error) => {
             alert(error.message)
         });
-
     }
     const signIn = (e) => {
-        e.preventDefualt()
+        e.preventDefault()
+        signInWithEmailAndPassword(
+            auth,
+            emailRef.current.value,
+            passwordRef.current.value
+        )
+        .then((user) => {
+            console.log(user)
+        })
+        .catch((error) => {
+            alert(error.message)
+        })
     }
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+              // User is signed in, see docs for a list of available properties
+              // https://firebase.google.com/docs/reference/js/auth.user
+              const uid = user.uid;
+              // ...
+              console.log(user)
+            } else {
+              // User is signed out
+              // ...
+            }
+          });
+    })
 
     return (
         <div className='signUpScreen'>
