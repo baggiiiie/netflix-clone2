@@ -32,27 +32,36 @@ function App() {
     })
 
     return unsubscribe;
-  }, [dispatch]);
+  }, []);
 
   return (
     <div className="app">
-       <Router>
+      {/* <Router>
+        <Routes>
+          {(!user) ? (
+            <Route path='/' element={<LoginScreen />} />
+          ) : (
+            <>
+              <Route path='/' element={<HomeScreen />} />
+              <Route path='/profile' element={<ProfileScreen />} />
+            </>
+            )}
+        </Routes>
+      </Router> */}
+      <Router>
+        {!user ? (
+          <LoginScreen />
+        ) : (
           <Routes>
-            {!user} ? (
-              <Route path='/' element={<LoginScreen />} />
-            ) : (
-              <Route path='/' element={
-                <HomeScreen />} />
-              <Route path="/profile" element={
-                <ProfileScreen />
-              }>
-              </Route>
-              <Route path="/users">
-              </Route>
-                )
-          </Routes>
-             
-         
+            <Route path='/' element={
+              <HomeScreen />} />
+            <Route path="/profile" element={
+              <ProfileScreen />
+            }>
+            </Route>
+            <Route path="/users">
+            </Route>
+          </Routes>)}
       </Router>
     </div>
   );
