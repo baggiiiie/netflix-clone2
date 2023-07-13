@@ -10,7 +10,6 @@ function LoginScreen() {
             <div className='loginScreen_background'>
                 <img 
                     className='loginScreen_logo'
-                    // src='https://assets.stickong.com/images/580b57fcd999624bc43c529.png'
                     src='https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png'
                     alt='loginScreen_background'
                 />
