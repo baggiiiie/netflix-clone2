@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import HomeScreen from './HomeScreen';
+import ProfileScreen from './ProfileScreen';
 import {
   BrowserRouter as Router,
   Routes,
@@ -26,31 +27,33 @@ function App() {
         }))
       } else {
         // Logged out
-        dispatch(logout)
+        dispatch(logout())
       }
     })
 
     return unsubscribe;
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="app">
        <Router>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Routes>
-          {/* <Route exact path='/' element={<HomeScreen/>} /> */}
-          <Route path='/' element={
-            !user ? <LoginScreen /> : <HomeScreen />
-          } />
-          <Route path="/about">
-          </Route>
-          <Route path="/users">
-          </Route>
-          <Route path="/">
-          </Route>
-        </Routes>
-    </Router>
+          <Routes>
+            {!user} ? (
+              <Route path='/' element={<LoginScreen />} />
+            ) : (
+              <Route path='/' element={
+                <HomeScreen />} />
+              <Route path="/profile" element={
+                <ProfileScreen />
+              }>
+              </Route>
+              <Route path="/users">
+              </Route>
+                )
+          </Routes>
+             
+         
+      </Router>
     </div>
   );
 }
