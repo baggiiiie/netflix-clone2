@@ -1,6 +1,7 @@
 .loginScreen {
-    position: relative;
+    position: fixed;
     height: 100%;
+    width: 100%;
     background: url("https://miro.medium.com/v2/resize:fit:1400/1*5lyavS59mazOFnb55Z6znQ.png")
     center no-repeat;
     background-size: cover; 

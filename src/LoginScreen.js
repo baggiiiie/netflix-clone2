@@ -11,7 +11,7 @@ function LoginScreen() {
                 <img 
                     className='loginScreen_logo'
                     src='https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png'
-                    alt='loginScreen_background'
+                    alt='loginScreen_logo'
                 />
                 <button
                     className='loginScreen_button'
