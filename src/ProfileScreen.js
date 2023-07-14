@@ -18,13 +18,15 @@ const ProfileScreen = () => {
                     />
                     <div className='profileScreen_details'>
                         <h2>{user.email}</h2>
+                        <div className='profileScreen_plans'>
+                            <h3>Plan:</h3>
+                            <button
+                                onClick={() => auth.signOut()}
+                                className='profileScreen_signOut'
+                            >Sign Out</button>
                     </div>
-                    <div className='profileScreen_plans'>
-                        <button
-                            onClick={() => auth.signOut()}
-                            className='profileScreen_signOut'
-                        >Sign Out</button>
                     </div>
+                    
                 </div>
             </div>
         </div>
