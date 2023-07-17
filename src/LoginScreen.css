@@ -1,13 +1,10 @@
 .loginScreen {
     position: relative;
     height: 100%;
-    /* width: 100%; */
-}
-.loginScreen_background {
     background: url("https://miro.medium.com/v2/resize:fit:1400/1*5lyavS59mazOFnb55Z6znQ.png");
-    background-size: cover; 
-    height: 100%;
-    position: relative;
+    /* background-size: cover;  */
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 .loginScreen_button {
     position: fixed;
@@ -20,6 +17,7 @@
     font-weight: 600;
     border: none;
     cursor: pointer;
+    z-index: 1;
 }
 .loginScreen_logo {
     position: fixed;
@@ -27,6 +25,7 @@
     width: 150px;
     padding: 20px;
     object-fit: contain;
+    z-index: 1;
  }
 .loginScreen_gradient {
     width: 100%;
@@ -41,41 +40,42 @@
 }
 .loginScreen_body {
     position: absolute;
-    z-index: 1;
+    /* z-index: 0; */
     color: #fff;
-    /* top: 30%;
-    margin-left: auto;
-    margin-right: auto; */
     margin: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     text-align: center;
     width: 80%;
-    height: 40%;
-    top: 0px;
+    /* height: 40%; */
+    height: calc(60% - 12vw);
+    top: 50%;
     bottom: 0;
     left: 0;
     right: 0;
     overflow-y: scroll;
-    /* white-space: pre-line; */
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 .loginScreen_body::-webkit-scrollbar {
     display: none;
   }
 .loginScreen_body > h1 {
-    font-size: 3.125rem;
-    /* font-size: 6vh; */
-    margin-bottom: 20px;
+    /* font-size: 3.125rem; */
+    font-size: calc(3vh + 1rem);
+    margin-bottom: 0px;
 }
 .loginScreen_body > h2 {
-    font-size: 2rem;
+    font-size: calc(3vh + 0.5rem);
     /* font-size: 4vh; */
     font-weight: 400;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 .loginScreen_body > h3 {
     /* font-size: 1.5rem; */
-    font-size: 3vh;
+    font-size: calc(2vh + 0.5rem);
     font-weight: 300;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
 }
 .loginScreen_input {
     margin: 20px;
@@ -83,14 +83,14 @@
 .loginScreen_input > form > input {
     padding: 10px;
     outline-width: 0;
-    height: 30px;
+    height: calc(1vh + 20px);
     width: 30%;
     border: none;
     max-width: 600px;
 }
 .loginScreen_getStarted {
-    padding: 16px 20px;
-    font-size: 1rm;
+    padding: calc(1vh + 7px) calc(1vh + 10px);
+    font-size: 1rem;
     color: #fff;
     border: none;
     background-color: #e50914;
