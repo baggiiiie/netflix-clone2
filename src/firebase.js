@@ -42,6 +42,7 @@ export {
   auth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  onAuthStateChanged
+  onAuthStateChanged,
+  collection
 };
 export default db;
