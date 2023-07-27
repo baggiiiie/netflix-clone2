@@ -2,9 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import './SignUpScreen.css'
 import {
     auth,
-    // createUserWithEmailAndPassword,
-    // signInWithEmailAndPassword,
-    // onAuthStateChanged
 } from './firebase';
 
 function SignUpScreen(props) {
