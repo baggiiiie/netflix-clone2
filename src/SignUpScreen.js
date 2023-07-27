@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import './SignUpScreen.css'
 import {
     auth,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    onAuthStateChanged
+    // createUserWithEmailAndPassword,
+    // signInWithEmailAndPassword,
+    // onAuthStateChanged
 } from './firebase';
 
 function SignUpScreen(props) {
@@ -13,8 +13,8 @@ function SignUpScreen(props) {
 
     const register = (e) => {
         e.preventDefault();
-        createUserWithEmailAndPassword(
-            auth,
+        auth.createUserWithEmailAndPassword(
+            // auth,
             emailRef.current.value,
             passwordRef.current.value
         )
@@ -27,8 +27,8 @@ function SignUpScreen(props) {
     }
     const signIn = (e) => {
         e.preventDefault()
-        signInWithEmailAndPassword(
-            auth,
+        auth.signInWithEmailAndPassword(
+            // auth,
             emailRef.current.value,
             passwordRef.current.value
         )
@@ -40,7 +40,7 @@ function SignUpScreen(props) {
         })
     }
     useEffect(() => {
-        const cleanup = onAuthStateChanged(auth, (user) => {
+        const cleanup = auth.onAuthStateChanged((user) => {
             if (user) {
               // User is signed in, see docs for a list of available properties
               // https://firebase.google.com/docs/reference/js/auth.user

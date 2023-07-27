@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import db from './firebase'
 import './PlanScreen.css'
-import { QuerySnapshot } from 'firebase/firestore';
+import db from './firebase'
+import {
+    // where,
+    // collection,
+    // dbProduct,
+} from './firebase'
+import { where, QuerySnapshot } from 'firebase/firestore';
 
 function PlanScreen(props) {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        db.collection("products")
-        .where("active", "==", true)
+        const dbProduct = db.collection("products")
+
+        dbProduct.where("active", "==", true)
         .get()
         .then((QuerySnapshot) => {
             const products = {}

@@ -7,7 +7,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import { auth, onAuthStateChanged } from './firebase';
+import { auth} from './firebase';
 import LoginScreen from './LoginScreen';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout, login, selectUser } from './features/counter/userSlice';
@@ -17,7 +17,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         // Logged in 
         console.log(user)
