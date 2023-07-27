@@ -1,7 +1,7 @@
 .plansScreen_plan {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 0px;
     opacity: 0.8;
 }
 .plansScreen_plan:hover {

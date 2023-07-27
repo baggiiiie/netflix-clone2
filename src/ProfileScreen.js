@@ -4,12 +4,14 @@ import { auth } from './firebase';
 import { useSelector } from 'react-redux';
 import { selectUser } from './features/counter/userSlice';
 import PlanScreen from './PlanScreen';
+import Nav from './Nav';
 
 const ProfileScreen = () => {
     const user = useSelector(selectUser)
 
     return (
         <div className='profileScreen'>
+                <Nav />
             <div className='profileScreen_body'>
                 <h1>Edit Profile</h1>
                 <div className='profileScreen_info'>

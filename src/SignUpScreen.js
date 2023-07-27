@@ -60,7 +60,7 @@ function SignUpScreen(props) {
                 <input ref={passwordRef} placeholder='Password' type='password' />
                 <button type='submit' onClick={signIn}>Sign In</button>
                 <h4>
-                    <span className='signUpScreen_gray'>New to Netflix?</span>
+                    <span className='signUpScreen_gray'>New to Netflix? </span>
                     <span className='signUpScreen_link' onClick={register}>Sign up now!</span>
                 </h4>
             </form>

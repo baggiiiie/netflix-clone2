@@ -72,9 +72,12 @@ function PlanScreen(props) {
     }
     return (
         <div className='plansScreen'>
-            {<p>Renewal date: &nbsp; 
-                {new Date(subscription?.current_period_end * 1000).toLocaleDateString()}
-            </p>}
+            { subscription ?
+                (<p>Renewal date: &nbsp; 
+                    {new Date(subscription?.current_period_end * 1000).toLocaleDateString()}
+                </p>) :
+                <p>No subscription</p>
+            }
 
            {Object.entries(products).map(([productId, productData]) => {
             const isCurrentPackage = productData.name
