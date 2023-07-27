@@ -6,7 +6,6 @@
 }
 .plansScreen_plan:hover {
     opacity: 1;
-
 }
 .plansScreen_plan > button {
     padding: 10px 20px;
@@ -16,4 +15,14 @@
     font-weight: 600;
     border: none;
     cursor: pointer;
+}
+.plansScreen_info {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.plansScreen_info > h5 {
+    margin: 0%;
+}
+.plansScreen_info > h6 {
+    margin: 0%;
 }

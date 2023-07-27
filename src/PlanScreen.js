@@ -6,10 +6,26 @@ import { selectUser } from './features/counter/userSlice';
 import { loadStripe } from '@stripe/stripe-js'; 
 
 const PUBLIC_KEY = 'pk_test_51NY8EeHbUMIxUt2PXU6xhrXZclDys8gReqDRv6AWFbrQSL2QebQpBhidtq59D9HEDwajigd5wjgAHjf4EQ0oxtIH008E0plJ5A'
-const SECRET_KEY = 'sk_test_51NY8EeHbUMIxUt2PXa9l4ynF7Wp8qJrvCGJZlnSqjpPbW0I6WUocSy2oxFXW5f4d5robarnZmU6byheXjDxsRtbf005GnZEZ4t'
 function PlanScreen(props) {
     const [products, setProducts] = useState([])
     const user = useSelector(selectUser)
+    const [subscription, setSubscription] = useState(null)
+
+    useEffect(() => {
+        db.collection("customers")
+        .doc(user.uid)
+        .collection("subscription")
+        .get()
+        .then(querySnapshot => {
+            querySnapshot.forEach(async subscription => {
+                setSubscription({
+                    role: subscription.data().role,
+                    current_period_end: subscription.data().current_period_end.seconds,
+                    current_period_start: subscription.data().current_period_start.seconds,
+                })
+            })
+        })
+    }, [user.uid])
 
     useEffect(() => {
         const dbProduct = db.collection("products")
@@ -63,10 +79,10 @@ function PlanScreen(props) {
                         <h5>{productData.name}</h5>
                         <h6>{productData.description}</h6>
                     </div>
-                    <button onClick={() => loadCheckout(productData.prices.priceId)}>Subsribe</button>
-                    {/* <button>Subsribe</button> */}
+                    <button 
+                        onClick={() => loadCheckout(productData.prices.priceId)}
+                    >Subsribe</button>
                 </div>
-
             )
            })} 
         </div>
