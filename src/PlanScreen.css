@@ -26,3 +26,7 @@
 .plansScreen_info > h6 {
     margin: 0%;
 }
+.plansScreen_plan--disabled > button {
+    background-color: gray !important;
+    cursor: default;
+}

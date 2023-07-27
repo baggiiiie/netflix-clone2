@@ -14,7 +14,7 @@ function PlanScreen(props) {
     useEffect(() => {
         db.collection("customers")
         .doc(user.uid)
-        .collection("subscription")
+        .collection("subscriptions")
         .get()
         .then(querySnapshot => {
             querySnapshot.forEach(async subscription => {
@@ -46,7 +46,7 @@ function PlanScreen(props) {
             setProducts(products)
         })
     }, [])
-    console.log(products)
+    // console.log(products)
 
     const loadCheckout = async (priceId) => {
         const docRef = await db
@@ -72,16 +72,34 @@ function PlanScreen(props) {
     }
     return (
         <div className='plansScreen'>
+            {<p>Renewal date: &nbsp; 
+                {new Date(subscription?.current_period_end * 1000).toLocaleDateString()}
+            </p>}
+
            {Object.entries(products).map(([productId, productData]) => {
+            const isCurrentPackage = productData.name
+                ?.toLowerCase()
+                .includes(subscription?.role)
+            const currentPackage = subscription?.role;
+            console.log(currentPackage)
+
             return (
-                <div className='plansScreen_plan'>
+                <div
+                    className={`${
+                        isCurrentPackage && "plansScreen_plan--disabled"
+                    } plansScreen_plan`}
+                    key={productId}>
                     <div className='plansScreen_info'>
                         <h5>{productData.name}</h5>
                         <h6>{productData.description}</h6>
                     </div>
                     <button 
-                        onClick={() => loadCheckout(productData.prices.priceId)}
-                    >Subsribe</button>
+                        onClick={() =>
+                            !isCurrentPackage && loadCheckout(productData.prices.priceId)
+                        }
+                    >
+                        {isCurrentPackage ? "Current Package" : "Subscribe"}
+                    </button>
                 </div>
             )
            })} 
