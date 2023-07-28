@@ -2,7 +2,7 @@
     position: relative;
     height: 100%;
     background: url("https://miro.medium.com/v2/resize:fit:1400/1*5lyavS59mazOFnb55Z6znQ.png");
-    /* background-size: cover;  */
+    background-size: cover; 
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -53,7 +53,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
