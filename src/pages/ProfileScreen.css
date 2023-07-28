@@ -1,6 +1,10 @@
 .profileScreen {
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
+    min-width: 500px;
     color: white;
+    background-color: black;
+    padding-bottom: 50px;
 }
 .profileScreen_body {
     display: flex;
