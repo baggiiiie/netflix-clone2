@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import './SignUpScreen.css'
 import {
     auth,
-} from './firebase';
+} from '../firebase';
 
 function SignUpScreen(props) {
     const emailRef = useRef(null);

@@ -1,8 +1,8 @@
 import React from 'react';
 import './ProfileScreen.css';
-import { auth } from './firebase';
+import { auth } from '../firebase';
 import { useSelector } from 'react-redux';
-import { selectUser } from './features/counter/userSlice';
+import { selectUser } from "../features/counter/userSlice";
 import PlanScreen from './PlanScreen';
 import Nav from './Nav';
 

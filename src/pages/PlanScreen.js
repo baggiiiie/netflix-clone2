@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './PlanScreen.css'
-import db from './firebase'
+import db from '../firebase'
 import { useSelector } from 'react-redux';
-import { selectUser } from './features/counter/userSlice';
+import { selectUser } from "../features/counter/userSlice";
 import { loadStripe } from '@stripe/stripe-js'; 
 
 const PUBLIC_KEY = 'pk_test_51NY8EeHbUMIxUt2PXU6xhrXZclDys8gReqDRv6AWFbrQSL2QebQpBhidtq59D9HEDwajigd5wjgAHjf4EQ0oxtIH008E0plJ5A'

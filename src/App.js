@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import HomeScreen from './HomeScreen';
-import ProfileScreen from './ProfileScreen';
+import HomeScreen from './pages/HomeScreen';
+import ProfileScreen from './pages/ProfileScreen';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from 'react-router-dom';
-import { auth} from './firebase';
-import LoginScreen from './LoginScreen';
+import { auth } from './firebase';
+import LoginScreen from './pages/LoginScreen';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout, login, selectUser } from './features/counter/userSlice';
 
