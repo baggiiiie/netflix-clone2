@@ -10,13 +10,16 @@
     transition-timing-function: ease-in;
     transition: all 0.5s;
 }
+
 .nav_black {
     background-color: black;
 }
+
 .nav_contents {
     display: lex;
     justify-content: space-between;
 }
+
 .nav_logo {
     position: fixed;
     left: 0px;
@@ -27,6 +30,7 @@
     padding-left: 20px;
     cursor: pointer;
 }
+
 .nav_avatar {
     position: fixed;
     right: 20px;

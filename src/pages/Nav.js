@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import './Nav.css';
@@ -6,7 +5,7 @@ import './Nav.css';
 function Nav() {
   const [navHide, setNavHide] = useState(true);
   const navigate = useNavigate();
-  
+
   const navTransition = () => {
     if (window.scrollY > 100) {
       setNavHide(false);
@@ -20,7 +19,7 @@ function Nav() {
   }, []);
 
   return (
-    <div className={`nav ${!navHide && 'nav_black'}`}>
+    <div className={`nav ${ !navHide && 'nav_black' }`}>
       <div className="nav_contents">
         <img
           onClick={() => navigate("/")}

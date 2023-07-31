@@ -20,16 +20,16 @@ function App() {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         // Logged in 
-        console.log(user)
+        console.log(user);
         dispatch(login({
           uid: user.uid,
           email: user.email
-        }))
+        }));
       } else {
         // Logged out
-        dispatch(logout())
+        dispatch(logout());
       }
-    })
+    });
 
     return unsubscribe;
   }, [dispatch]);

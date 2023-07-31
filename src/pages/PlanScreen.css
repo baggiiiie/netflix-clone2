@@ -4,10 +4,12 @@
     padding: 20px 0px;
     opacity: 0.8;
 }
+
 .plansScreen_plan:hover {
     opacity: 1;
 }
-.plansScreen_plan > button {
+
+.plansScreen_plan>button {
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
@@ -16,17 +18,21 @@
     border: none;
     cursor: pointer;
 }
+
 .plansScreen_info {
     margin-top: auto;
     margin-bottom: auto;
 }
-.plansScreen_info > h5 {
+
+.plansScreen_info>h5 {
     margin: 0%;
 }
-.plansScreen_info > h6 {
+
+.plansScreen_info>h6 {
     margin: 0%;
 }
-.plansScreen_plan--disabled > button {
+
+.plansScreen_plan--disabled>button {
     background-color: gray !important;
     cursor: default;
 }

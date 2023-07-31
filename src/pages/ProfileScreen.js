@@ -7,11 +7,11 @@ import PlanScreen from './PlanScreen';
 import Nav from './Nav';
 
 const ProfileScreen = () => {
-    const user = useSelector(selectUser)
+    const user = useSelector(selectUser);
 
     return (
         <div className='profileScreen'>
-                <Nav />
+            <Nav />
             <div className='profileScreen_body'>
                 <h1>Edit Profile</h1>
                 <div className='profileScreen_info'>
@@ -28,9 +28,9 @@ const ProfileScreen = () => {
                                 onClick={() => auth.signOut()}
                                 className='profileScreen_signOut'
                             >Sign Out</button>
+                        </div>
                     </div>
-                    </div>
-                    
+
                 </div>
             </div>
         </div>

@@ -2,18 +2,18 @@ import React, { useEffect, useState } from 'react';
 import axios from '../axios';
 import './Row.css';
 
-function Row({title, fetchUrl, isLarge = false}) {
+function Row({ title, fetchUrl, isLarge = false }) {
     const [movies, setMovies] = useState([]);
     const baseUrl = "https://image.tmdb.org/t/p/original/";
 
-    useEffect(()=>{
+    useEffect(() => {
         async function fetchData() {
-            const request = await axios.get(fetchUrl)
+            const request = await axios.get(fetchUrl);
             setMovies(request.data.results);
             return request;
         }
         fetchData();
-    }, [fetchUrl])
+    }, [fetchUrl]);
 
     return (
         <div className='row'>
@@ -22,14 +22,13 @@ function Row({title, fetchUrl, isLarge = false}) {
                 {movies.map(
                     movie => (
                         ((isLarge && movie.poster_path) ||
-                        (!isLarge && movie.backdrop_path)) && (
+                            (!isLarge && movie.backdrop_path)) && (
                             <img
-                            className={`row_poster ${isLarge && 'row_posterLarge'}`}
-                            key={movie.id}
-                            src={`${baseUrl}${
-                                isLarge ? movie.poster_path : movie.backdrop_path
-                            }`} 
-                            alt={`${movie.name}`}/> 
+                                className={`row_poster ${ isLarge && 'row_posterLarge' }`}
+                                key={movie.id}
+                                src={`${ baseUrl }${ isLarge ? movie.poster_path : movie.backdrop_path
+                                    }`}
+                                alt={`${ movie.name }`} />
                         )
                     )
                 )}

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './SignUpScreen.css'
+import './SignUpScreen.css';
 import {
     auth,
 } from '../firebase';
@@ -15,42 +15,42 @@ function SignUpScreen(props) {
             emailRef.current.value,
             passwordRef.current.value
         )
-        .then((user) => {
-            console.log(user);
-        })
-        .catch((error) => {
-            alert(error.message)
-        });
-    }
+            .then((user) => {
+                console.log(user);
+            })
+            .catch((error) => {
+                alert(error.message);
+            });
+    };
     const signIn = (e) => {
-        e.preventDefault()
+        e.preventDefault();
         auth.signInWithEmailAndPassword(
             // auth,
             emailRef.current.value,
             passwordRef.current.value
         )
-        .then((user) => {
-            console.log(user)
-        })
-        .catch((error) => {
-            alert(error.message)
-        })
-    }
+            .then((user) => {
+                console.log(user);
+            })
+            .catch((error) => {
+                alert(error.message);
+            });
+    };
     useEffect(() => {
         const cleanup = auth.onAuthStateChanged((user) => {
             if (user) {
-              // User is signed in, see docs for a list of available properties
-              // https://firebase.google.com/docs/reference/js/auth.user
-              const uid = user.uid;
-              // ...
-              console.log(user)
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/auth.user
+                const uid = user.uid;
+                // ...
+                console.log(user);
             } else {
-              // User is signed out
-              // ...
+                // User is signed out
+                // ...
             }
-          });
-          return () => cleanup
-    }, [])
+        });
+        return () => cleanup;
+    }, []);
 
     return (
         <div className='signUpScreen'>

@@ -1,7 +1,7 @@
 import React from 'react';
-import './LoginScreen.css'
+import './LoginScreen.css';
 
-const SignUpText = ({onClick}) => {
+const SignUpText = ({ onClick }) => {
     return (
         <>
             <h1>Unlimited films, TV programmes and more.</h1>
@@ -12,10 +12,10 @@ const SignUpText = ({onClick}) => {
             <div className='loginScreen_input'>
                 <form>
                     <input type='email' placeholder='Enter your Email to get started' />
-                    <button 
+                    <button
                         className='loginScreen_getStarted'
                         onClick={onClick}
-                        >Get Started</button>
+                    >Get Started</button>
                 </form>
             </div>
         </>
