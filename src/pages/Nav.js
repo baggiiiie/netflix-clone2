@@ -7,7 +7,7 @@ function Nav() {
   const navigate = useNavigate();
 
   const navTransition = () => {
-    if (window.scrollY > 10) {
+    if (window.scrollY > 2) {
       setNavHide(false);
     } else {
       setNavHide(true);

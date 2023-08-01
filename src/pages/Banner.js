@@ -35,6 +35,7 @@ function Banner() {
         backgroundPosition: 'center center',
       }}
     >
+      <div className='banner_fadeTop' />
       <div className="banner_contents">
         <h1 className="banner_title">
           {movie?.title || movie?.name || movie?.original_name}
