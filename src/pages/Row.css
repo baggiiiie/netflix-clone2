@@ -1,6 +1,7 @@
 .row {
     color: white;
     margin-left: 20px;
+    position: relative;
 }
 
 .row_posters {
@@ -20,11 +21,12 @@
     margin-right: 10px;
     width: 100%;
     transition: transform 250ms;
+    transition-delay: 100ms;
 }
 
 .row_poster:hover {
-    transform: scale(1.3);
-    opacity: 1;
+    transform: scale(1.2);
+    z-index: 1;
 }
 
 .row_posterLarge {
