@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react';
-import './SignUpScreen.css';
+import './SignUpForm.css';
 import {
     auth,
 } from '../firebase';
 
-function SignUpScreen(props) {
+function SignUpForm(props) {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
 
@@ -68,4 +68,4 @@ function SignUpScreen(props) {
     );
 }
 
-export default SignUpScreen;
+export default SignUpForm;

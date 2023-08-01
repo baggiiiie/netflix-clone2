@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './LoginScreen.css';
-import SignUpScreen from './SignUpScreen';
+import SignUpForm from './SignUpForm';
 import SignUpText from './SignUpText';
 
 function LoginScreen() {
@@ -24,7 +24,7 @@ function LoginScreen() {
 
             <div className='loginScreen_body' >
                 {signIn ? (
-                    <SignUpScreen />
+                    <SignUpForm />
                 ) : (
                     <SignUpText onClick={() => setSignIn(true)} />
                 )}

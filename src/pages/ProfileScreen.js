@@ -15,10 +15,12 @@ const ProfileScreen = () => {
             <div className='profileScreen_body'>
                 <h1>Edit Profile</h1>
                 <div className='profileScreen_info'>
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
-                        alt='Profile Pic'
-                    />
+                    <div className='profileScreen_pic'>
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+                            alt='Profile Pic'
+                        />
+                    </div>
                     <div className='profileScreen_details'>
                         <h2>{user.email}</h2>
                         <div className='profileScreen_plans'>
