@@ -26,15 +26,13 @@ function Banner() {
   // console.log(movie);
 
   return (
-    <header
+    <div
       className="banner"
       style={{
-        backgroundSize: 'cover',
-        // eslint-disable-next-line quotes
         backgroundImage: `url("https://image.tmdb.org/t/p/original/${ movie?.backdrop_path }")`,
-        backgroundPosition: 'center center',
       }}
     >
+      <img src={`https://image.tmdb.org/t/p/original/${ movie?.backdrop_path }`} />
       <div className='banner_fadeTop' />
       <div className="banner_contents">
         <h1 className="banner_title">
@@ -49,7 +47,7 @@ function Banner() {
         </h1>
       </div>
       <div className="banner_fadeBottom" />
-    </header>
+    </div>
   );
 }
 export default Banner;
