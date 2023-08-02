@@ -5,10 +5,12 @@
 }
 
 .row_posters {
+    position: relative;
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
-    padding: 20px;
+    padding-left: 15px;
+    /* padding: 20px; */
 }
 
 .row_posters::-webkit-scrollbar {
@@ -18,10 +20,25 @@
 .row_poster {
     max-height: 100px;
     object-fit: contain;
-    margin-right: 10px;
-    width: 100%;
+    /* margin-right: 10px; */
+    margin: 5px 10px;
+    margin-bottom: 50px;
+    /* padding: 5px 5px; */
+    width: 20%;
+    min-width: 170px;
     /* transition: transform 250ms;
     transition-delay: 250ms; */
+}
+
+.row_posterLogo {
+    position: relative;
+    width: 50px;
+    top: 25px;
+    left: 5px;
+}
+
+.row_posterPic {
+    height: 100%;
 }
 
 .row_poster:hover {

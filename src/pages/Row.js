@@ -23,12 +23,20 @@ function Row({ title, fetchUrl, isLarge = false }) {
                     movie => (
                         ((isLarge && movie.poster_path) ||
                             (!isLarge && movie.backdrop_path)) && (
-                            <img
-                                className={`row_poster ${ isLarge && 'row_posterLarge' }`}
+                            <div
                                 key={movie.id}
-                                src={`${ baseUrl }${ isLarge ? movie.poster_path : movie.backdrop_path
-                                    }`}
-                                alt={`${ movie.name }`} />
+                                className={`row_poster ${ isLarge && 'row_posterLarge' }`}>
+                                <img
+                                    className='row_posterLogo'
+                                    src='https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png'
+                                />
+                                <img
+                                    className='row_posterPic'
+                                    src={`${ baseUrl }${ isLarge ? movie.poster_path : movie.backdrop_path
+                                        }`}
+                                    alt={`${ movie.name }`} />
+                            </div>
+
                         )
                     )
                 )}
