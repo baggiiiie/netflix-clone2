@@ -7,7 +7,7 @@
 
 .banner_contents {
     margin-left: 30px;
-    padding-top: 70px;
+    padding-top: 90px;
     height: 190px;
 }
 
@@ -29,10 +29,11 @@
 .banner_fadeTop {
     position: relative;
     top: 0;
-    height: 70px;
+    height: 50px;
     background-image: linear-gradient(0deg,
             transparent,
             rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 1),
             #000);
 }
 
