@@ -1,6 +1,8 @@
 # Netflix Clone
 Available at https://netflix-clone-ca6e8.web.app/
 
+This Netflix Clone utilizes firebase for web deployment, stripe for checkout and implemented with React, Redux.
+
 
 ## Getting Started with Create React App and Redux
 
