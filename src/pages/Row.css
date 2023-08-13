@@ -1,24 +1,19 @@
 .row {
-    position: relative;
     color: white;
     padding-left: 20px;
-    position: relative;
 }
 
 .row_title {
     position: absolute;
     margin: 0px 0px;
-    z-index: 0;
 }
 
 .row_posters {
-    position: relative;
     display: flex;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     overflow-x: scroll;
     padding-top: 15px;
     padding-bottom: 50px;
-    z-index: 1;
 }
 
 .row_posters::-webkit-scrollbar {
@@ -41,7 +36,7 @@
 
 .row_poster:hover {
     transform: scale(1.5);
-    z-index: 10;
+    z-index: 999;
 }
 
 .row_posterLarge {
@@ -50,10 +45,10 @@
     margin-right: 3px;
 }
 
-.row_posterLarge:hover {
+/* .row_posterLarge:hover {
     transform: scale(1.2);
     overflow-wrap: unset;
-}
+} */
 
 .row_posterLogo {
     position: relative;
