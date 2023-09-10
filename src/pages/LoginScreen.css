@@ -1,111 +1,113 @@
 .loginScreen {
-    position: relative;
-    height: 100vh;
-    min-height: 400px;
-    width: 100vw;
-    min-width: 400px;
-    background: url("https://miro.medium.com/v2/resize:fit:1400/1*5lyavS59mazOFnb55Z6znQ.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+	position: relative;
+	height: 100vh;
+	min-height: 400px;
+	width: 100vw;
+	min-width: 400px;
+	background: url("https://miro.medium.com/v2/resize:fit:1400/1*5lyavS59mazOFnb55Z6znQ.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .loginScreen_button {
-    position: fixed;
-    right: 20px;
-    top: 20px;
-    padding: 10px 20px;
-    size: 1rem;
-    color: #fff;
-    background-color: #e50914;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    z-index: 1;
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	padding: 10px 20px;
+	size: 1rem;
+	color: #fff;
+	background-color: #e50914;
+	font-weight: 600;
+	border: none;
+	cursor: pointer;
+	z-index: 1;
 }
 
 .loginScreen_logo {
-    position: fixed;
-    left: 0;
-    width: 150px;
-    padding: 20px;
-    object-fit: contain;
-    z-index: 1;
+	position: fixed;
+	left: 0;
+	width: 150px;
+	padding: 20px;
+	object-fit: contain;
+	z-index: 1;
 }
 
 .loginScreen_gradient {
-    width: 100%;
-    z-index: 1;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.1);
-    background-image: linear-gradient(to top,
-            rgba(0, 0, 0, 0.7) 0,
-            rgba(0, 0, 0, 0) 60%,
-            rgba(0, 0, 0, 0.7) 100%)
+	width: 100%;
+	z-index: 1;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	background-image: linear-gradient(
+		to top,
+		rgba(0, 0, 0, 0.7) 0,
+		rgba(0, 0, 0, 0) 60%,
+		rgba(0, 0, 0, 0.7) 100%
+	);
 }
 
 .loginScreen_body {
-    position: absolute;
-    /* z-index: 0; */
-    color: #fff;
-    margin: auto;
-    text-align: center;
-    width: 100%;
-    min-height: 40vh;
-    margin-top: auto;
-    margin-bottom: auto;
-    top: 50%;
-    height: calc(50% - 5vh);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+	position: absolute;
+	/* z-index: 0; */
+	color: #fff;
+	margin: auto;
+	text-align: center;
+	width: 100%;
+	min-height: 40vh;
+	margin-top: auto;
+	margin-bottom: auto;
+	top: 50%;
+	height: calc(50% - 5vh);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 .loginScreen_body::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
-.loginScreen_body>h1 {
-    font-size: min(calc(5vmax + 7px), 50px);
-    margin-bottom: 0px;
-    padding-left: 50px;
-    padding-right: 50px;
+.loginScreen_body > h1 {
+	font-size: min(calc(5vmax + 7px), 50px);
+	margin-bottom: 0px;
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
-.loginScreen_body>h2 {
-    font-size: min(calc(3vmax + 4px), 40px);
-    font-weight: 400;
-    /* margin-bottom: 30px; */
-    padding-left: 50px;
-    padding-right: 50px;
+.loginScreen_body > h2 {
+	font-size: min(calc(3vmax + 4px), 40px);
+	font-weight: 400;
+	/* margin-bottom: 30px; */
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
-.loginScreen_body>h3 {
-    font-size: min(calc(2vmax + 2px), 20px);
-    font-weight: 300;
-    /* margin-bottom: 40px; */
-    padding-left: 50px;
-    padding-right: 50px;
+.loginScreen_body > h3 {
+	font-size: min(calc(2vmax + 2px), 20px);
+	font-weight: 300;
+	/* margin-bottom: 40px; */
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
 .loginScreen_input {
-    margin: 20px;
+	margin: 20px;
 }
 
-.loginScreen_input>form>input {
-    padding: 10px;
-    outline-width: 0;
-    height: calc(1vh + 20px);
-    width: 30%;
-    border: none;
-    max-width: 600px;
+.loginScreen_input > form > input {
+	padding: 10px;
+	outline-width: 0;
+	height: calc(1vh + 20px);
+	width: 30%;
+	border: none;
+	max-width: 600px;
 }
 
 .loginScreen_getStarted {
-    padding: calc(1vh + 7px) calc(1vh + 10px);
-    font-size: 1rem;
-    color: #fff;
-    border: none;
-    background-color: #e50914;
-    font-weight: 600;
-    cursor: pointer;
+	padding: calc(1vh + 7px) calc(1vh + 10px);
+	font-size: 1rem;
+	color: #fff;
+	border: none;
+	background-color: #e50914;
+	font-weight: 600;
+	cursor: pointer;
 }
